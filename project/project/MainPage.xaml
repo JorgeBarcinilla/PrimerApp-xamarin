@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="project.MainPage">
+
+    <Grid RowSpacing="15"  Margin="15,15,15,15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Height="*"/>
+            <ColumnDefinition Height="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Entry x:Name="Nombre" Grid.Row="0" Grid.Column="0" Placeholder="Nombre" />
+        <Entry x:Name="Apellido" Grid.Row="0" Grid.Column="1" Placeholder="Apellido" />
+        <Editor x:Name="Bio" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Biografia" HeightRequest="150"/>
+        <Image HorizontalOptions="Center"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="microsoft.png" HeightRequest="277" />
+        <Label Text="Lorem Ipsum" 
+            TextColor="Red" 
+            FontSize="22" 
+            HorizontalOptions="Center 
+            Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Lorem1" />
+        <Label Text="Lorem Ipsum" 
+            TextColor="Blue" 
+            FontSize="22" 
+            HorizontalOptions="Center" 
+            Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Lorem2" />
+        <ListView Grid.Row="5" Grid.Column="0">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Hola</x:String>
+                    <x:String>Mundo</x:String>
+                    <x:String>En</x:String>
+                    <x:String>Barranquilla</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+        <ListView Grid.Row="5" Grid.Column="1">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Hello</x:String>
+                    <x:String>World</x:String>
+                    <x:String>In</x:String>
+                    <x:String>Barranquilla</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" x:Name="BotonAgregar" Text="AGREGAR" Clicked="BotonAgregar_Clicked" />
+    </Grid>
+
+</ContentPage>
